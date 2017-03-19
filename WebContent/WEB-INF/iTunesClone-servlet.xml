@@ -84,7 +84,7 @@
 
 	<bean id="messageSource"
 		class="org.springframework.context.support.ResourceBundleMessageSource">
-		<property name="basename" value="\resources\messages" />
+		<property name="basename" value="\WEB-INF\jsp\messages" />
 	</bean>
 
 	<!-- Declare the Interceptor -->
