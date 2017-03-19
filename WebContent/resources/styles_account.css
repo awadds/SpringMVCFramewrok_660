@@ -1,0 +1,52 @@
+body{
+	text-align:center;
+}
+
+#top-div{
+	border-style: solid;
+	height:75px;
+	width:100%;
+	margin-bottom: 5px;
+}
+
+h1{
+	color:black;
+	text-align:center;	
+}
+
+#general-div{
+	margin:0 auto;
+	border-style:solid;
+	text-align:center;
+	margin-top:5px;
+	padding:10px;
+	height:800px;
+	width:800px;
+}
+
+#carte-div{
+	margin:0 auto;
+	border-style:solid;
+	text-align:center;
+	margin-top:5px;
+	padding:10px;
+	height:320px;
+	width:800px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+button {
+	margin-top:15px;
+	margin-bottom:15px;
+
+}
+
+button-save-cancel {
+	float:right;
+}

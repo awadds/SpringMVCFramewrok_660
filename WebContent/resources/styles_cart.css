@@ -1,0 +1,81 @@
+body{
+	text-align:center;
+}
+
+#top-div{
+	border-style: solid;
+	height:75px;
+	width:100%;
+	margin-bottom: 5px;
+}
+
+h1{
+	color:black;
+	text-align:center;	
+}
+
+#cart-films-div{
+	float:left;
+	border-style:solid;
+	border-color:green;
+	height:980px;
+	width:75%;
+}
+
+.movie{	
+	float:left;
+	border-style:solid;
+	border-color:red;	
+	height:auto;
+	width:48.5%;
+	z-index:10;
+}
+
+.poster-div{	
+	border-style:solid;
+	border-color:blue;
+}
+
+.poster{
+	height:300px;
+	width:220px;
+}
+
+.title-div{
+	border-style:solid;
+	border-color:blue;
+}
+.dates-div{
+	border-style:solid;
+	border-color:blue;
+}
+.cout-div{
+	border-style:solid;
+	border-color:blue;
+}
+.remove{
+	height:65px;
+	width:65px;
+	border-style:solid;
+	border-color:blue;
+	background:url(images/remove.png) no-repeat;
+	background-size:contain;
+}
+#confirmation-div{
+	float:right;
+	padding:2px;
+	border-style:solid;
+	border-color:green;
+	height:21px;
+	width:22.5%;
+}
+
+#wrapper-div{
+	margin:0 auto;
+	border-style:solid;
+	text-align:center;
+	margin-top:5px;
+	padding:10px;
+	height:1000px;
+	width:800px;
+}

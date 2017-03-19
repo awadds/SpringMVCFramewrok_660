@@ -1,0 +1,126 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+   http://www.springframework.org/schema/beans     
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context 
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd
+   http://www.springframework.org/schema/mvc
+   http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+
+	<context:component-scan base-package="ets.gti660" />
+
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+		<property name="url"
+			value="jdbc:oracle:thin:@big-data-2.logti.etsmtl.ca:1521/GTI660" />
+		<property name="username" value="Equipe5" />
+		<property name="password" value="sM75iSUK" />
+	</bean>
+
+	<!--<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" 
+		/> <property name="url" value="jdbc:oracle:thin:@localhost:1521/orcl12c" 
+		/> <property name="username" value="SYSTEM" /> <property name="password" 
+		value="oracle" /> </bean> -->
+
+	<!-- Definition for studentJDBCTemplate bean -->
+	<bean id="filmJDBCTemplate" class="ets.gti660.template.FilmJDBCTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- Definition for studentJDBCTemplate bean -->
+	<bean id="genreJDBCTemplate" class="ets.gti660.template.GenreJDBCTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- Definition for studentJDBCTemplate bean -->
+	<bean id="connectionJDBCTemplate" class="ets.gti660.template.ConnectionJDBCTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- Definition for compteUtilisateurJDBCTemplate bean -->
+	<bean id="compteUtilisateurJDBCTemplate" class="ets.gti660.template.CompteUtilisateurJDBCTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- Definition for compteUtilisateurJDBCTemplate bean -->
+	<bean id="clientJDBCTemplate" class="ets.gti660.template.ClientJDBCTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- Definition for compteUtilisateurJDBCTemplate bean -->
+	<bean id="carteCreditJDBCTemplate" class="ets.gti660.template.CarteCreditJDBCTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- Definition for compteUtilisateurJDBCTemplate bean -->
+	<bean id="personneJDBCTemplate" class="ets.gti660.template.PersonneJDBCTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- Definition for compteUtilisateurJDBCTemplate bean -->
+	<bean id="langueJDBCTemplate" class="ets.gti660.template.LangueJDBCTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- Definition for compteUtilisateurJDBCTemplate bean -->
+	<bean id="paysJDBCTemplate" class="ets.gti660.template.PaysJDBCTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- Definition for compteUtilisateurJDBCTemplate bean -->
+	<bean id="pretJDBCTemplate" class="ets.gti660.template.PretJDBCTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename" value="\resources\messages" />
+	</bean>
+
+	<!-- Declare the Interceptor -->
+	<mvc:interceptors>
+		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+			<property name="paramName" value="language" />
+		</bean>
+	</mvc:interceptors>
+
+	<!-- Declare the Resolver -->
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.SessionLocaleResolver" />
+
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix">
+			<value>/WEB-INF/jsp/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+
+	<!-- Definition for compteUtilisateurJDBCTemplate bean -->
+	<bean id="accessData" class="ets.gti660.data.AccessData" />
+
+	<mvc:annotation-driven />
+	<mvc:default-servlet-handler />
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+	<mvc:resources mapping="/resources/bootstrap-3.3.7/**"
+		location="/resources/bootstrap-3.3.7" />
+	<mvc:annotation-driven />
+
+
+
+</beans>

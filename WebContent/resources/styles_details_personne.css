@@ -1,0 +1,61 @@
+body{
+	text-align:center;
+}
+
+#top-div{
+	border-style: solid;
+	height:75px;
+	width:100%;
+	margin-bottom: 5px;
+}
+
+h1{
+	color:black;
+	text-align:center;	
+}
+
+#info-div{
+	border-style: solid;
+	border-color: green;
+	height:500px;
+	width:910px;
+	text-align:center;
+}
+
+#photo{
+	border-style: solid;
+	border-color: red;
+	height:300px;
+	width:220px;
+	float:left;
+}
+
+.info-text-div{
+	border-style: solid;
+	border-color: red;
+	height:50px;
+	line-height: 50px;
+	
+	width:100px;
+	float:left;
+	display: block;
+	vertical-align:top;
+}
+
+#bio{
+	position: relative;
+    left: 225px;
+    bottom: 250px;
+	height:242px;
+	width: 317px;
+	clear:both;
+}
+
+table
+{
+    border-collapse: collapse;
+}
+td
+{
+    border: 1px solid black;
+}

@@ -1,0 +1,33 @@
+body{
+	text-align:center;
+}
+
+#top-div{
+	border-style: solid;
+	height:75px;
+	width:100%;
+	margin-bottom: 5px;
+}
+
+h1{
+	color:black;
+	text-align:center;	
+}
+
+#info-div{
+	border-style: solid;
+	border-color: green;
+	height:500px;
+	width:910px;
+	text-align:center;
+}
+
+table
+{
+    border-collapse: collapse;
+}
+td
+{
+    border: 1px solid black;
+}
+
