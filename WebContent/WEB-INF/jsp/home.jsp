@@ -41,27 +41,27 @@
 					class="icon-bar"></span>
 			</button>
 			<a class="navbar-brand" href="#"><spring:message code="nav.site"
-					text="default text" /></a>
+					text="ItunesClone" /></a>
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="home"><spring:message
-							code="nav.home" text="default text" /></a></li>
+							code="nav.home" text="Accueil" /></a></li>
 
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="cart"><span
 						class="	glyphicon glyphicon-shopping-cart"></span> <spring:message
-							code="nav.cart" text="default text" /></a></li>
+							code="nav.cart" text="Panier" /></a></li>
 				<li><a href="emprunts"><span
 						class="	glyphicon glyphicon-film"></span> <spring:message
-							code="nav.rent" text="default text" /></a></li>
+							code="nav.rent" text="Emprunt" /></a></li>
 				<li><a href="account"><span
 						class="glyphicon glyphicon-user"></span> <spring:message
-							code="nav.message" text="default text" />, ${nom}!</a></li>
+							code="nav.message" text="Bonjour" />, ${nom}!</a></li>
 				<li><a href="login"><span
 						class="glyphicon glyphicon-log-out"></span> <spring:message
-							code="nav.logout" text="default text" /></a></li>
+							code="nav.logout" text="Déconnexion" /></a></li>
 			</ul>
 		</div>
 	</div>
@@ -75,16 +75,18 @@
 					<ul class="nav nav-tabs">
 						<li class="dropdown"><a data-toggle="dropdown"
 							class="btn btn-default dropdown-toggle" href="#"><spring:message
-									code="filter.genre" text="default text" /> <b class="caret"></b></a>
+									code="filter.genre" text="Genre" /> <b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li><a data-toggle="tab" href="#genres"><spring:message
-											code="filter.genre" text="default text" /></a></li>
+											code="filter.genre" text="Genre" /></a></li>
 								<li><a data-toggle="tab" href="#Pays"><spring:message
-											code="filter.pays" text="default text" /></a></li>
+											code="filter.pays" text="Pays" /></a></li>
 								<li><a data-toggle="tab" href="#Langues"><spring:message
-											code="filter.langue" text="default text" /></a></li>
+											code="filter.langue" text="langue" /></a></li>
 								<li><a data-toggle="tab" href="#Temps"><spring:message
-											code="filter.temps" text="default text" /></a></li>
+											code="filter.temps" text="Durée" /></a></li>
+								<li><a data-toggle="tab" href="#Recherche"><spring:message
+											code="filter.recherche" text="Recherche par contenu" /></a></li>
 							</ul></li>
 					</ul>
 					<div id="criterias-checkboxes">
@@ -121,13 +123,19 @@
 
 							<div id="Temps" class="tab-pane fade">
 								<h3>
-									<spring:message code="filter.temps" text="default text" />
+									<spring:message code="filter.temps" text="Durée" />
 								</h3>
 								<label for="min">Min:</label><input type="number" name="min"
 									min="1" max="300" /><br> <label for="max">Max:</label><input
 									type="number" name="max" min="1" max="300" />
 
 							</div>
+							
+							<div id="Recherche" class="tab-pane fade">
+							   <h3>Recherche par contenu</h3>						
+							</div>
+													
+							
 						</div>
 					</div>
 				</div>
@@ -140,22 +148,22 @@
 						<div class="form-group">
 							<input id="search-bar-input" type="text" name="search"
 								class="form-control"
-								placeholder="<spring:message code="placeholder.home" text="default text" />">
+								placeholder="<spring:message code="placeholder.home" text="Recherche par nom de film, acteur, année..." />">
 							<button id="search-bar-submit" type="submit"
 								class="btn btn-default">
-								<spring:message code="label.search" text="default text" />
+								<spring:message code="label.search" text="Rechercher" />
 							</button>
 						</div>
 					</form>
 				</div>
 				<form id="upload-form" enctype="multipart/form-data">
-					<spring:message code="label.download" var="ld" text="default text" />
+					<spring:message code="label.download" var="ld" text="Télécharger json" />
 					<input type="file" name="file" id="file" /> <input
 						id="upload-file-submit" type="submit" value="Upload File" />
 				</form>
 
 				<h1>
-					<spring:message code="title.home" text="default text" />
+					<spring:message code="title.home" text="Résultat de la recherche" />
 				</h1>
 
 				<div class="container-fluid bg-3 text-center">
@@ -164,10 +172,10 @@
 
 				<hr>
 				<h3>
-					<spring:message code="label.help" text="default text" />
+					<spring:message code="label.help" text="Aide" />
 				</h3>
 				<p>
-					<spring:message code="help.home" text="default text" />
+					<spring:message code="help.home" text="Il est possible de rechercher pour un film ou une personne dans la barre de recherche. Utilisez le filtre, afin de spécifier des contraintes." />
 				</p>
 
 			</div>
